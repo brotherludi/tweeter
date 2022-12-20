@@ -1,0 +1,15 @@
+.head {
+  height: 610px;
+  background-color: #a2e95b;
+  background-image: url("http://www.transparenttextures.com/patterns/az-subtle.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%
+}
+
+.username {
+  color: #FFFFFF;
+  font-family: "Source Sans Pro";
+}
