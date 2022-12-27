@@ -32,3 +32,8 @@ textarea {
   height: 30px;
   width: 100%;
 }
+
+/* Red counter when more than 140 character */
+.negative-count {
+  color: red;
+}
