@@ -1,15 +1,22 @@
 .head {
-  height: 610px;
+  height: auto;
   background-color: #a2e95b;
   background-image: url("http://www.transparenttextures.com/patterns/az-subtle.png");
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: column wrap;
-  width: 100%
+  flex-direction: column;
+  width: 100%;
+}
+
+.profile-pic {
+  margin-top: 470px;
+  zoom: 27%;
 }
 
 .username {
+  margin-top: 14px;
+  margin-left: 1.75em;
   color: #FFFFFF;
   font-family: "Source Sans Pro";
 }

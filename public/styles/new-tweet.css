@@ -23,7 +23,7 @@
 
 textarea {
   border: none;
-  border-bottom: solid;
+  border-bottom: 3px solid black;
   background-color: #FFFFFF;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 17px;
@@ -31,6 +31,13 @@ textarea {
   margin-top: 5px;
   height: 30px;
   width: 100%;
+}
+
+.submit-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 /* Red counter when more than 140 character */
