@@ -1,8 +1,4 @@
-.tweet-container {
-  font-family: sans-serif;
-}
-
-.tweet-head {
+.tweet-header {
   font-size: 20px;
   margin: 1em;
   display: flex;
@@ -11,27 +7,27 @@
   align-items: flex-end;
 }
 
-.userid {
+.user-handle {
   color: #cbc5d6;
 }
 
-.tweet-content {
+.tweet-text {
   margin: 1em;
 }
 
-.timestamp {
+.tweet-date {
   margin: 1em;
   font-size: 14px;
 }
 
-.tweet-foot {
+.tweet-footer {
   flex-direction: row;
   border-top: 3px solid black;
   display: flex;
   justify-content: space-between;
 }
 
-.tweet-actions i {
+.tweet-response i {
   margin-top: 0.6em;
   margin-right: 0.6em;
   zoom: 70%;
@@ -44,6 +40,6 @@ article:hover {
   color: tomato;
 }
 
-.tweet-actions i:hover {
+.tweet-response i:hover {
   color: gold;
 }

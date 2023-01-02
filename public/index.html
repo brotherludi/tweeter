@@ -29,9 +29,11 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
-
-  <!-- Character counter JS -->
   <script type="text/javascript" src=/scripts/composer-char-counter.js></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
@@ -67,26 +69,8 @@
         </div>
       </form>
     </section>
-
-    <section class="tweet-container">
-      <article>
-        <header class="tweet-head">
-          <div class="profile"><img src="/images/tweet-profile.png">Newton</div>
-          <div class="userid">@SirIsaac</div>
-        </header>
-        <main class='tweet-content'>
-          If I have seen further, it is by standing on the shoulders of giants.
-        </main>
-        <footer class="tweet-foot">
-          <div class="timestamp">10 days ago</div>
-          <div class="tweet-actions">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-    </section>
+    <!--This section contains individual tweets-->
+    <section id="tweets-container"></section>
   </main>
 </body>
 
