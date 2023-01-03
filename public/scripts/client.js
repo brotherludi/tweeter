@@ -27,7 +27,7 @@ $(document).ready(function () {
           </div>
         </header>
         <div class="tweet-text">
-          ${tweet.content.text}
+        ${escape(tweet.content.text)}
         </div>
         <footer class="tweet-footer">
           <span class="tweet-date">${timeago.format(tweet.created_at)}</span>
@@ -40,6 +40,12 @@ $(document).ready(function () {
       </article>`);
     return $tweet;
   }
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   $("#new-tweet-form").submit(function (event) {
     event.preventDefault();
@@ -60,10 +66,9 @@ $(document).ready(function () {
   })
 
   const loadTweets = function () {
-    $.ajax("/tweets/", { method: "GET", dataType: "json", })
-      .then((newTweet) => {
-        renderTweets(newTweet.reverse()); //newest tweet on top
-      });
+    $.get("/tweets/", function (newTweet) {
+      renderTweets(newTweet.reverse()); //newest tweet on top
+    });
   }
   loadTweets();
 })
