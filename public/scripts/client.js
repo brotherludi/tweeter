@@ -7,8 +7,17 @@ $(document).ready(function () {
 
   $("#new-tweet-form").submit(function (event) {
     event.preventDefault();
-    const newTweet = $(this).serialize();
-    $.post("/tweets/", newTweet);
+    const maxCharacter = 140;
+    const tweetLength = $(this).find("#tweet-text").val().length;
+
+    if (!tweetLength) {
+      return alert("Please enter something before you Tweet! 😅");
+    } else if (tweetLength - maxCharacter > 0) {
+      return alert("The maximum message length is 140 characters! 🤓");
+    } else {
+      const newTweet = $(this).serialize();
+      $.post("/tweets/", newTweet);
+    }
   })
 
   const renderTweets = function (tweets) {
