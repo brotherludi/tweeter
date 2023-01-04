@@ -6,6 +6,9 @@
 
 $(document).ready(function () {
 
+  $("#error-empty").hide();
+  $("#error-tooLong").hide();
+
   const renderTweets = function (tweets) {
     $('#tweets-container').empty();
     for (let tweet of tweets) {
@@ -52,23 +55,29 @@ $(document).ready(function () {
     const maxCharacter = 140;
     const tweetLength = $(this).find("#tweet-text").val().length;
 
-    if (!tweetLength) {
-      return alert("Please enter something before you Tweet! 😅");
-    } else if (tweetLength - maxCharacter > 0) {
-      return alert("The maximum message length is 140 characters! 🤓");
-    }
-    const newTweet = $(this).serialize();
-    $.post("/tweets/", newTweet, () => {
-      $(this).find("#tweet-text").val(""); //reset input box empty
-      $(this).find(".counter").val(maxCharacter); //reset character counter to 140
-      loadTweets();
-    });
-  })
+    $("#error-empty").hide();
+    $("#error-tooLong").hide();
 
-  const loadTweets = function () {
-    $.get("/tweets/", function (newTweet) {
-      renderTweets(newTweet.reverse()); //newest tweet on top
-    });
-  }
-  loadTweets();
+    if (!tweetLength) {
+      $("#error-empty").slideDown("slow");
+      $("#error-tooLong").hide();
+    } else if (tweetLength - maxCharacter > 0) {
+      $("#error-tooLong").slideDown("slow");
+      $("#error-empty").hide();
+    } else {
+      const newTweet = $(this).serialize();
+      $.post("/tweets/", newTweet, () => {
+        $(this).find("#tweet-text").val(""); //reset input box empty
+        $(this).find(".counter").val(maxCharacter); //reset character counter to 140
+        loadTweets();
+      });
+    }
+
+    const loadTweets = function () {
+      $.get("/tweets/", function (newTweet) {
+        renderTweets(newTweet.reverse()); //newest tweet on top
+      });
+    }
+    loadTweets();
+  });
 })

@@ -44,3 +44,20 @@ textarea {
 .negative-count {
   color: red;
 }
+
+.errorMessage {
+  color: red;
+  border: 3px solid red;
+  font-size: 20px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.fa-exclamation-triangle {
+  margin-left: 5px;
+  margin-right: 5px;
+}
