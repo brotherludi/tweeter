@@ -5,10 +5,11 @@
  */
 
 $(document).ready(function () {
-
+  //Error messages are hidden by default
   $("#error-empty").hide();
   $("#error-tooLong").hide();
 
+  //Taking in an array of tweet objects and then appending each one to the #tweets-container
   const renderTweets = function (tweets) {
     $('#tweets-container').empty();
     for (let tweet of tweets) {
@@ -17,6 +18,7 @@ $(document).ready(function () {
     }
   }
 
+  //Returning a tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function (tweet) {
     let $tweet = $(`
   <article>
@@ -43,13 +45,14 @@ $(document).ready(function () {
       </article>`);
     return $tweet;
   }
-
+  //Re-encoding text so that unsafe characters are converted into a safe "encoded" representation
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  //Adds new tweet when click submit
   $("#new-tweet-form").submit(function (event) {
     event.preventDefault();
     const maxCharacter = 140;
@@ -73,6 +76,7 @@ $(document).ready(function () {
       });
     }
 
+    //Responsible for fetching tweets from the http://localhost:8080/tweets page
     const loadTweets = function () {
       $.get("/tweets/", function (newTweet) {
         renderTweets(newTweet.reverse()); //newest tweet on top
