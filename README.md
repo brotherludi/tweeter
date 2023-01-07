@@ -6,11 +6,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 # Final Product
 
-<img width="1495" alt="Screenshot 2023-01-06 at 10 05 11 PM" src="https://user-images.githubusercontent.com/110562017/211132180-ad6ccaca-6ff5-42a8-abcf-e6b92163cdc9.png">
 Desktop Version 🖥️
+<img width="1495" alt="Screenshot 2023-01-06 at 10 05 11 PM" src="https://user-images.githubusercontent.com/110562017/211132180-ad6ccaca-6ff5-42a8-abcf-e6b92163cdc9.png">
 
-<img width="729" alt="Screenshot 2023-01-06 at 10 02 22 PM" src="https://user-images.githubusercontent.com/110562017/211132198-6e39650a-2518-415d-9045-35f579d5fcd9.png">
+
 Mobile Version 📱
+<img width="729" alt="Screenshot 2023-01-06 at 10 02 22 PM" src="https://user-images.githubusercontent.com/110562017/211132198-6e39650a-2518-415d-9045-35f579d5fcd9.png">
 
 ## Getting Started
 
@@ -25,4 +26,4 @@ Mobile Version 📱
 - Express
 - Node 5.10.x or above
 
-### Have fun tweeting and enjoy! 🥰
+#### Have fun tweeting and enjoy! 🥰
