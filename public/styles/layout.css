@@ -48,6 +48,29 @@ article {
   margin-bottom: 0.5em;
 }
 
+@media only screen and (min-width: 1024px) {
+  #content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #error {
+    margin-top: 180px;
+  }
+
+  .new-tweet {
+    margin-top: 60px;
+  }
+
+  .profile-pic {
+    margin-bottom: 200px;
+  }
+
+  .container {
+    margin-right: 50px;
+  }
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

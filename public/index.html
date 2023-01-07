@@ -33,6 +33,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
     integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Disabling Viewport Zooming -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 </head>
 
 <body>
@@ -44,49 +47,52 @@
     <footer>
       <button class='write'>
         <span><b>Write</b> a new tweet</span>
-        <div><i class="fa-solid fa-angles-down"></i></div>
+        <div><i class="fas fa-angle-double-down"></i></div>
       </button>
     </footer>
   </nav>
 
-  <header class="head">
-    <div>
-      <img class=profile-pic src="/images/profile-b.png">
-      <h2 class="username"><b>Di</b> Lu</h2>
-    </div>
-  </header>
+  <!-- Profile picture and Username -->
+  <div id="content">
+    <header class="head">
+      <div>
+        <img class=profile-pic src="/images/profile-b.png">
+        <h2 class="username"><b>Di</b> Lu</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
-    <!--Error Messages-->
-    <section id="error">
-      <span id="error-empty" class="errorMessage">
-        <i class="fas fa-exclamation-triangle"></i>
-        Please enter something before you Tweet! 😅
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
-      <span id="error-tooLong" class="errorMessage">
-        <i class="fas fa-exclamation-triangle"></i>
-        The maximum message length is 140 characters! 🤓
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
-    </section>
+      <!--Error Messages-->
+      <section id="error">
+        <span id="error-empty" class="errorMessage">
+          <i class="fas fa-exclamation-triangle"></i>
+          Please enter something before you Tweet! 😅
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+        <span id="error-tooLong" class="errorMessage">
+          <i class="fas fa-exclamation-triangle"></i>
+          The maximum message length is 140 characters! 🤓
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+      </section>
 
-    <!--Submitting New Tweet-->
-    <section class="new-tweet">
-      <form id="new-tweet-form" action="/tweets" method="POST">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="submit-counter">
-          <button id="submit" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <!--This section contains individual tweets-->
-    <section id="tweets-container"></section>
-  </main>
+      <!--Submitting New Tweet-->
+      <section class="new-tweet">
+        <form id="new-tweet-form" action="/tweets" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="submit-counter">
+            <button id="submit" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <!--This section contains individual tweets-->
+      <section id="tweets-container"></section>
+    </main>
+  </div>
 </body>
 
 </html>
