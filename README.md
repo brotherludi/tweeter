@@ -7,7 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 # Final Product
 
 Desktop Version 🖥️
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/110562017/211181918-0c2fb54c-aa2f-4a03-ba12-abc18c2daa65.gif)
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/110562017/211213231-9d56aee3-0b1e-438e-a8ad-11bbfc9ec35d.gif)
 
 
 Mobile Version 📱

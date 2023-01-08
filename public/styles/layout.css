@@ -45,7 +45,8 @@ body {
 
 article {
   border: 3px solid black;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -55,11 +56,12 @@ article {
   }
 
   #error {
-    margin-top: 180px;
+    position: absolute;
+    top: 140px;
   }
 
   .new-tweet {
-    margin-top: 60px;
+    margin-top: 236px;
   }
 
   .profile-pic {
