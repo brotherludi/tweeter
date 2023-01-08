@@ -11,7 +11,7 @@ Desktop Version 🖥️
 
 
 Mobile Version 📱
-<img width="729" alt="Screenshot 2023-01-06 at 10 02 22 PM" src="https://user-images.githubusercontent.com/110562017/211132198-6e39650a-2518-415d-9045-35f579d5fcd9.png">
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/110562017/211182004-29c60951-268e-4f13-a667-e6d3b879edf6.gif)
 
 ## Getting Started
 
