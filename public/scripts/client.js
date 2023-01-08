@@ -9,6 +9,13 @@ $(document).ready(function () {
   $("#error-empty").hide();
   $("#error-tooLong").hide();
 
+  //Re-encoding text so that unsafe characters are converted into a safe "encoded" representation
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //Taking in an array of tweet objects and then appending each one to the #tweets-container
   const renderTweets = function (tweets) {
     $('#tweets-container').empty();
@@ -45,12 +52,14 @@ $(document).ready(function () {
       </article>`);
     return $tweet;
   }
-  //Re-encoding text so that unsafe characters are converted into a safe "encoded" representation
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
+
+  //Responsible for fetching tweets from the http://localhost:8080/tweets page
+  const loadTweets = function () {
+    $.get("/tweets/", function (newTweet) {
+      renderTweets(newTweet.reverse()); //newest tweet on top
+    });
+  }
+  loadTweets();
 
   //Adds new tweet when click submit
   $("#new-tweet-form").submit(function (event) {
@@ -75,13 +84,5 @@ $(document).ready(function () {
         loadTweets();
       });
     }
-
-    //Responsible for fetching tweets from the http://localhost:8080/tweets page
-    const loadTweets = function () {
-      $.get("/tweets/", function (newTweet) {
-        renderTweets(newTweet.reverse()); //newest tweet on top
-      });
-    }
-    loadTweets();
   });
 })

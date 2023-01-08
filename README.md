@@ -7,7 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 # Final Product
 
 Desktop Version 🖥️
-<img width="1495" alt="Screenshot 2023-01-06 at 10 05 11 PM" src="https://user-images.githubusercontent.com/110562017/211132180-ad6ccaca-6ff5-42a8-abcf-e6b92163cdc9.png">
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/110562017/211181918-0c2fb54c-aa2f-4a03-ba12-abc18c2daa65.gif)
 
 
 Mobile Version 📱
